@@ -12,6 +12,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import NextLink from "next/link";
 import About from "../pages/about/index";
 import Skills from "../pages/skills/index";
+import Hobbies from "./hobbies";
 
 const Home: NextPage = () => {
   return (
@@ -93,7 +94,7 @@ const Home: NextPage = () => {
       </div>
       <About />
       <Skills />
-      <About />
+      <Hobbies />
     </div>
   );
 };

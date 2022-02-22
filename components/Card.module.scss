@@ -1,0 +1,52 @@
+$card-size: 15rem;
+$accent_col: #333333;
+$accent_col_light: #c4c4c4;
+.container {
+  width: $card-size;
+  height: $card-size * 1.2;
+  background-color: #fff;
+  -webkit-box-shadow: 5px 5px 18px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 18px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 18px -5px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  position: relative;
+
+  .card_overlay:hover {
+    transform: scale(1.2);
+  }
+  .hobby_icon {
+    width: $card-size/3.5;
+  }
+  .hobby_name {
+    margin-block: 1rem;
+  }
+  .explore_btn {
+    z-index: 99;
+    cursor: pointer;
+    transition: all 0.1s;
+    background-color: $accent_col;
+    border: none;
+    color: $accent_col_light;
+    padding: 0.25rem 0.7rem;
+    border-radius: 3rem;
+  }
+  @media (hover) {
+    .explore_btn:hover {
+      transform: scale(1.05);
+    }
+  }
+  .plant {
+    width: 13rem;
+    position: absolute;
+    right: -8rem;
+    @media only screen and (max-width: 570px) {
+      & {
+        display: none;
+      }
+    }
+  }
+}

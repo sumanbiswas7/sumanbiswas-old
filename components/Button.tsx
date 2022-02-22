@@ -1,7 +1,13 @@
 import styles from "./Button.module.scss";
 import NextLink from "next/link";
 
-export function Button(props) {
+interface Button {
+  href: String | any;
+  style: String;
+  text: String;
+}
+
+export function Button(props: Button) {
   return (
     <NextLink href={props.href}>
       {props.style == "dark" ? (

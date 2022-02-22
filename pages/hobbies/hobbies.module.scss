@@ -1,0 +1,54 @@
+.main_container {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .photography_bg {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+    background-image: url("../../public/hobbies/photography_bg.jpg");
+    background-size: cover;
+  }
+  .img_shadow {
+    z-index: 50;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-image: url("../../public/hobbies/bg_texture.svg");
+    background-size: cover;
+    background-position: center;
+  }
+  .plant {
+    width: 13rem;
+    margin-left: -5rem;
+    z-index: 99;
+  }
+  .small_frame {
+    display: none;
+  }
+  @media only screen and (max-width: 570px) {
+    flex-direction: column;
+    .plant {
+      display: none;
+    }
+    .small_frame {
+      display: block;
+      position: absolute;
+    }
+    #small_frame_tr {
+      top: 0;
+      right: 0;
+    }
+    #small_frame_bl {
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
