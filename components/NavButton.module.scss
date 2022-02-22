@@ -1,0 +1,39 @@
+$accent_col: #333333;
+$accent_col_light: #c4c4c4;
+$accent_col_light_hover: #a3a2a2;
+
+.navbar_button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: $accent_col_light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  z-index: 9999;
+  &_line {
+    transition: all 0.2s;
+    background-color: $accent_col;
+    width: 1.5rem;
+    height: 2px;
+    position: relative;
+    margin-block: 3px;
+  }
+  @media (hover) {
+    &:hover {
+      background-color: $accent_col_light_hover;
+    }
+    &:hover #line_top {
+      transform: translateY(2px);
+    }
+    &:hover #line_end {
+      transform: translateY(-2px);
+    }
+  }
+}

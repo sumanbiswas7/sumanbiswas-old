@@ -1,0 +1,84 @@
+.main_container {
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 900px) {
+    & {
+      justify-content: center;
+    }
+  }
+  .about_text_container {
+    margin-left: 15rem;
+    z-index: 999;
+    padding-top: 3rem;
+    @media screen and (max-width: 900px) {
+      & {
+        margin: 0;
+      }
+    }
+
+    &_header {
+      font-size: clamp(1.4rem, 5vw, 2.5rem);
+      color: #333333;
+    }
+    &_para {
+      margin-top: 0.5rem;
+      margin-left: 1.5rem;
+      width: 35ch;
+      @media screen and (max-width: 900px) {
+        & {
+          width: 34ch;
+        }
+      }
+    }
+    &_icon_container {
+      margin-left: 1.5rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 8rem;
+      margin-top: 1rem;
+      &_icon {
+        background-color: #333333;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+      &_resume_btn {
+        background-color: #333333;
+        border: none;
+        color: #c4c4c4;
+        height: 2rem;
+        width: 4.5rem;
+        border-radius: 3rem;
+      }
+    }
+  }
+}
+.top_left_tex {
+  position: absolute;
+  width: 22rem;
+  top: 0;
+  left: 0;
+}
+.buttom_right_tex {
+  width: 25rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+@media only screen and (max-width: 570px) {
+  .top_left_tex {
+    width: 15rem;
+  }
+  .buttom_right_tex {
+    width: 18rem;
+  }
+}

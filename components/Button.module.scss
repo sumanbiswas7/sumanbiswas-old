@@ -1,0 +1,43 @@
+$accent_col: #333333;
+$accent_col_light: #c4c4c4;
+$accent_col_light_hover: #a3a2a2;
+
+.button {
+  border: none;
+  cursor: pointer;
+  color: $accent_col_light;
+  background-color: $accent_col;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.3rem;
+  border: 2px solid $accent_col;
+  margin-inline: 3px;
+  font-family: "mr-sb";
+  transition: all 0.25s;
+  @media (hover) {
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0);
+      border: 2px solid $accent_col;
+      color: $accent_col;
+    }
+  }
+}
+
+.button_light {
+  font-family: "mr-sb";
+  border: none;
+  cursor: pointer;
+  background-color: rgba($color: #000000, $alpha: 0);
+  border: 2px solid $accent_col;
+  margin-inline: 3px;
+  color: $accent_col;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.3rem;
+  transition: all 0.25s;
+  @media (hover) {
+    &:hover {
+      color: $accent_col_light;
+      background-color: $accent_col;
+      border: 2px solid $accent_col;
+    }
+  }
+}
