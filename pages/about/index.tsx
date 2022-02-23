@@ -4,10 +4,10 @@ import { BsInstagram } from "react-icons/bs";
 export default function About() {
   return (
     <div className={styles.main_container}>
-      <img className={styles.top_left_tex} src="./about_top-left_tex.svg" />
+      <img className={styles.top_left_tex} src="./about/about_top-left_tex.svg" />
       <img
         className={styles.buttom_right_tex}
-        src="./about_buttom-right_tex.svg"
+        src="./about/about_buttom-right_tex.svg"
       />
       <div className={styles.about_text_container}>
         <h1 className={styles.about_text_container_header}>

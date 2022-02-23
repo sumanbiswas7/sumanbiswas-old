@@ -1,0 +1,27 @@
+.container {
+  .button {
+    background: rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(3px);
+    border: none;
+    margin-inline: 0.2rem;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s all;
+    @media (hover) {
+      &:hover {
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+  margin-top: 1rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

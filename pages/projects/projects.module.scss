@@ -1,0 +1,18 @@
+.main_container {
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../public/projects/bg.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .swiper {
+    width: 100vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

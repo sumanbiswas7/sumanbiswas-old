@@ -7,12 +7,12 @@ import { NavButton } from "../components/NavButton";
 import { Button } from "../components/Button";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
-import { FiMail } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import NextLink from "next/link";
 import About from "../pages/about/index";
 import Skills from "../pages/skills/index";
 import Hobbies from "./hobbies";
+import Projects from "./projects";
 
 const Home: NextPage = () => {
   return (
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
               <div className={styles.main_container_image_container_circle}>
                 <img
                   className={styles.main_container_image_container_hero_img}
-                  src="./my_img.png"
+                  src="./home/my_img.webp"
                 />
               </div>
             </div>
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
               <div className={styles.main_container_image_container_circle}>
                 <img
                   className={styles.main_container_image_container_hero_img}
-                  src="./my_img.png"
+                  src="./home/my_img.webp"
                 />
               </div>
             </div>
@@ -95,6 +95,7 @@ const Home: NextPage = () => {
       <About />
       <Skills />
       <Hobbies />
+      <Projects />
     </div>
   );
 };

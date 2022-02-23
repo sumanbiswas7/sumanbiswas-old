@@ -14,10 +14,10 @@ export function Card(props: Card) {
       <img src={props.img} className={styles.hobby_icon} />
       <h4 className={styles.hobby_name}>{props.name}</h4>
       <NextLink href={props.link}>
-        <button className={styles.explore_btn}>explore</button>
+        <button className={styles.button}>explore</button>
       </NextLink>
       {props.last ? (
-        <img src="./hobbies/plant.svg" className={styles.plant} />
+        <img src="./hobbies/plants.webp" className={styles.plant} />
       ) : null}
     </div>
   );

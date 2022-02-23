@@ -24,15 +24,24 @@ $accent_col_light: #c4c4c4;
   .hobby_name {
     margin-block: 1rem;
   }
-  .explore_btn {
-    z-index: 99;
+
+  .button {
+    z-index: 9999;
+    overflow: hidden;
+    color: #c4c4c4;
+    background-color: #333333;
+    padding: 0.2rem 0.7rem;
+    position: relative;
+    transition: all 0.2s;
     cursor: pointer;
-    transition: all 0.1s;
-    background-color: $accent_col;
-    border: none;
-    color: $accent_col_light;
-    padding: 0.25rem 0.7rem;
     border-radius: 3rem;
+    border: 2px solid rgba(0, 0, 0, 0);
+    font-size: 0.85rem;
+    &:hover {
+      color: #333333;
+      border: 2px solid #333333;
+      background-color: #c4c4c4;
+    }
   }
   @media (hover) {
     .explore_btn:hover {
