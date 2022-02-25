@@ -9,10 +9,11 @@ export default function Skills() {
       </div>
       <div className={styles.img_container}>
         {/* <img className={styles.earth} src="./skills/earth2.webp" /> */}
-        <img
+        {/* <img
           className={styles.earth}
           src="https://sumanbiswas-website.s3.ap-south-1.amazonaws.com/skills/earth2.webp"
-        />
+        /> */}
+        <div className={styles.earth2} />
       </div>
     </div>
   );

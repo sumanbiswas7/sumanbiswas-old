@@ -43,10 +43,18 @@
   //   bottom: -10rem;
   // }
 }
-.planets {
-  top: 0;
-  right: 0;
+.earth2 {
+  width: 45rem;
+  height: 45rem;
+  background-size: cover;
+  background-position: center;
+  bottom: -22.5rem;
   position: absolute;
+  animation-name: rotate;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-image: url("../../public/skills/earth2.webp");
 }
 @keyframes rotate {
   0% {
