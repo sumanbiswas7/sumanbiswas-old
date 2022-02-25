@@ -2,13 +2,18 @@
   scroll-snap-align: start;
   width: 100vw;
   height: 100vh;
-  background-image: url("../../public/projects/bg.webp");
+  background-image: url("../../public/projects/bg_texture.webp");
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  @media only screen and (max-width: 570px) {
+    & {
+      background-image: url("../../public/projects/bg_texture_mobile.webp");
+    }
+  }
   .pagename {
     position: absolute;
     top: 1.8rem;

@@ -22,7 +22,7 @@
 .img_container {
   width: 100vw;
   height: 100vh;
-  background-image: url("../../public/skills_bg_star.svg");
+  background-image: url("../../public/skills/skills_bg_star.svg");
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -38,10 +38,10 @@
   animation-duration: 30s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  @media only screen and (max-width: 570px) {
-    width: 20rem;
-    bottom: -10rem;
-  }
+  // @media only screen and (max-width: 570px) {
+  //   width: 20rem;
+  //   bottom: -10rem;
+  // }
 }
 .planets {
   top: 0;

@@ -14,9 +14,9 @@ export default function Hobbies() {
         last={false}
         link="/"
         name="Photography"
-        img="./hobbies/photography.png"
+        img="./hobbies/photography.svg"
       />
-      <Card last={true} link="/" name="Football" img="./hobbies/football.png" />
+      <Card last={true} link="/" name="Football" img="./hobbies/football.svg" />
     </div>
   );
 }

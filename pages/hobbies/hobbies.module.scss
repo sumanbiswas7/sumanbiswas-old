@@ -24,8 +24,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("../../public/hobbies/photography_bg.webp");
+    background-image: url("../../public/hobbies/bg.webp");
     background-size: cover;
+    @media only screen and (max-width: 570px) {
+      & {
+        background-image: url("../../public/hobbies/bg_mobile.webp");
+      }
+    }
   }
   .img_shadow {
     z-index: 50;
