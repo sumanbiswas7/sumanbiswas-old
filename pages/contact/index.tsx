@@ -3,9 +3,11 @@ import { FaInstagram } from "react-icons/fa";
 import { FiFacebook } from "react-icons/fi";
 import { AiOutlineTwitter } from "react-icons/ai";
 import NextLink from "next/link";
+import { NavButton } from "../../components/NavButton";
 export default function Contact() {
   return (
     <div className={styles.main_container}>
+      <NavButton />
       <div className={styles.pagename}>
         <p className={styles.pagename_name}>contact</p>
         <div className={styles.pagename_border} />

@@ -62,6 +62,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 50%;
+        transition: all 0.2s;
       }
       &_resume_btn {
         background-color: #333333;
@@ -70,6 +71,13 @@
         height: 2rem;
         width: 4.5rem;
         border-radius: 3rem;
+        transition: all 0.2s;
+        border: 2px solid #333333;
+        &:hover {
+          background-color: #c4c4c4;
+          border: 2px solid #333333;
+          color: #333333;
+        }
       }
     }
   }

@@ -1,9 +1,11 @@
 import { Card } from "../../components/Card";
+import { NavButton } from "../../components/NavButton";
 import styles from "./hobbies.module.scss";
 
 export default function Hobbies() {
   return (
     <div className={styles.main_container}>
+      <NavButton />
       <div className={styles.pagename}>
         <p className={styles.pagename_name}>hobbies</p>
         <div className={styles.pagename_border} />

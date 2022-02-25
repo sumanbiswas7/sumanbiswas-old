@@ -8,11 +8,51 @@ export function NavButton() {
     <>
       {modal ? (
         <div className={styles.modal}>
-          <NextLink href={"/"}>
-            <div className={styles.modal_div}>
-              <h2 className={styles.modal_div_page}>Home</h2>
-            </div>
-          </NextLink>
+          <div className={styles.modal_link_container}>
+            <NextLink href={"/"}>
+              <div className={styles.modal_div}>
+                <h2 className={styles.modal_div_page}>
+                  {" "}
+                  <span>01 &nbsp;</span>Home
+                </h2>
+              </div>
+            </NextLink>
+            <NextLink href={"/about"}>
+              <div className={styles.modal_div}>
+                <h2 className={styles.modal_div_page}>
+                  <span>02 &nbsp;</span>About
+                </h2>
+              </div>
+            </NextLink>
+            <NextLink href={"/skills"}>
+              <div className={styles.modal_div}>
+                <h2 className={styles.modal_div_page}>
+                  <span>03 &nbsp;</span>Skills
+                </h2>
+              </div>
+            </NextLink>
+            <NextLink href={"/hobbies"}>
+              <div className={styles.modal_div}>
+                <h2 className={styles.modal_div_page}>
+                  <span>04 &nbsp;</span>Hobbies
+                </h2>
+              </div>
+            </NextLink>
+            <NextLink href={"/projects"}>
+              <div className={styles.modal_div}>
+                <h2 className={styles.modal_div_page}>
+                  <span>05 &nbsp;</span>Projects
+                </h2>
+              </div>
+            </NextLink>
+            <NextLink href={"/contact"}>
+              <div className={styles.modal_div}>
+                <h2 className={styles.modal_div_page}>
+                  <span>06 &nbsp;</span>Contact
+                </h2>
+              </div>
+            </NextLink>
+          </div>
         </div>
       ) : null}
       {!modal ? (

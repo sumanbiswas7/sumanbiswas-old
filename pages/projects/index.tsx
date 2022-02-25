@@ -3,10 +3,12 @@ import styles from "./projects.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { NextButton } from "../../components/NextButton";
+import { NavButton } from "../../components/NavButton";
 
 export default function Projects() {
   return (
     <div className={styles.main_container}>
+      <NavButton />
       <div className={styles.pagename}>
         <p className={styles.pagename_name}>projects</p>
         <div className={styles.pagename_border} />

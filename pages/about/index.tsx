@@ -1,9 +1,12 @@
 import styles from "./about.module.scss";
 import { BsInstagram } from "react-icons/bs";
+import { NavButton } from "../../components/NavButton";
+import NextLink from "next/link";
 
 export default function About() {
   return (
     <div className={styles.main_container}>
+      <NavButton />
       <div className={styles.pagename}>
         <p className={styles.pagename_name}>about</p>
         <div className={styles.pagename_border} />
@@ -28,13 +31,17 @@ export default function About() {
         </p>
         <div className={styles.about_text_container_icon_container}>
           <div className={styles.about_text_container_icon_container_icon}>
-            <BsInstagram size={20} color="#c4c4c4" />
+            <NextLink href={"https://www.instagram.com/sumanbiswas7/"}>
+              <BsInstagram size={20} color="#c4c4c4" />
+            </NextLink>
           </div>
-          <button
-            className={styles.about_text_container_icon_container_resume_btn}
-          >
-            resume
-          </button>
+          <NextLink href="https://drive.google.com/file/d/1gbo8yzCoMlM6foz54ZSEXhB4ApDX8YAY/view?usp=sharing">
+            <button
+              className={styles.about_text_container_icon_container_resume_btn}
+            >
+              resume
+            </button>
+          </NextLink>
         </div>
       </div>
     </div>

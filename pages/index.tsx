@@ -52,7 +52,7 @@ const Home: NextPage = () => {
               <p className={styles.main_container_text_container_text_small}>
                 sutdent, web &amp; app dev
               </p>
-              <Button text="hire me" href="/" style="dark" />
+              <Button text="hire me" href="/contact" style="dark" />
               <Button
                 text="resume"
                 href="https://drive.google.com/file/d/1gbo8yzCoMlM6foz54ZSEXhB4ApDX8YAY/view?usp=sharing"
@@ -83,7 +83,7 @@ const Home: NextPage = () => {
                 size={29}
               />
             </NextLink>
-            <NextLink href={"http://sumanbiswas842001@gmail.com"}>
+            <NextLink href={"https://wa.me/917407992473?text=<website>:"}>
               <HiOutlineMail
                 className={styles.footer_contact_mail_container_icon}
                 color="#333333"
