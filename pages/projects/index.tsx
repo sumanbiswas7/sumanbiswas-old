@@ -7,6 +7,10 @@ import { NextButton } from "../../components/NextButton";
 export default function Projects() {
   return (
     <div className={styles.main_container}>
+      <div className={styles.pagename}>
+        <p className={styles.pagename_name}>projects</p>
+        <div className={styles.pagename_border} />
+      </div>
       <Swiper
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}

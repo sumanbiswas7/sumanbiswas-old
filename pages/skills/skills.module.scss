@@ -3,6 +3,20 @@
   width: 100vw;
   height: 100vh;
   background-color: black;
+  position: relative;
+  .pagename {
+    position: absolute;
+    top: 1.8rem;
+    right: 5rem;
+    &_name {
+      color: #fff;
+    }
+    &_border {
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+    }
+  }
 }
 
 .img_container {
@@ -17,16 +31,16 @@
   justify-content: center;
 }
 .earth {
-  width: 70rem;
-  bottom: -40rem;
+  width: 45rem;
+  bottom: -22.5rem;
   position: absolute;
   animation-name: rotate;
   animation-duration: 30s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   @media only screen and (max-width: 570px) {
-    width: 60rem;
-    bottom: -30rem;
+    width: 20rem;
+    bottom: -10rem;
   }
 }
 .planets {

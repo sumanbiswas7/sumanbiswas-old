@@ -1,8 +1,69 @@
 $accent_col: #333333;
 $accent_col_light: #c4c4c4;
 $accent_col_light_hover: #a3a2a2;
+.modal {
+  animation-name: modal-animation;
+  animation-duration: 0.25s;
+  transform: all 0.5s;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: absolute;
+  z-index: 2000;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &_div {
+    font-size: 2rem;
+    &_anim {
+      width: 100%;
+      height: 100%;
+    }
+    &_page {
+      position: relative;
+      padding-inline: 1rem;
+      font-weight: 300;
+      overflow: hidden;
+      color: rgba(0, 0, 0, 0.796);
+      border-radius: 5px;
 
+      &::before {
+        content: "";
+        transform: translateX(-15rem);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        border-radius: 5px;
+        z-index: -1;
+        transition: all 0.25s;
+      }
+      &:hover::before {
+        transform: translateX(0);
+      }
+    }
+  }
+  background: linear-gradient(
+    24.92deg,
+    #ffffff 0%,
+    #c4c4c4 23.96%,
+    #333333 100%
+  );
+  @keyframes modal-animation {
+    0% {
+      transform: translate(90%, -90%) scale(0);
+    }
+    100% {
+      transform: translate(0) scale(1);
+    }
+  }
+}
 .navbar_button {
+  border: none;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -25,15 +86,32 @@ $accent_col_light_hover: #a3a2a2;
     position: relative;
     margin-block: 3px;
   }
-  @media (hover) {
-    &:hover {
-      background-color: $accent_col_light_hover;
-    }
-    &:hover #line_top {
-      transform: translateY(2px);
-    }
-    &:hover #line_end {
-      transform: translateY(-2px);
-    }
+  &:hover {
+    background-color: $accent_col_light_hover;
+  }
+  &:hover #line_top {
+    transform: translateY(1px);
+  }
+  &:hover #line_end {
+    transform: translateY(-1px);
+  }
+  &:active {
+    background-color: $accent_col_light_hover;
+  }
+  &:active #line_top {
+    transform: translateY(2px);
+  }
+  &:active #line_end {
+    transform: translateY(-2px);
+  }
+}
+.navbar_button_x {
+  .navbar_line_x {
+    transform: rotate(45deg);
+    position: relative;
+  }
+  #line_end_x {
+    transform: rotate(-45deg);
+    position: absolute;
   }
 }

@@ -8,6 +8,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  .pagename {
+    position: absolute;
+    top: 1.8rem;
+    right: 5rem;
+    &_name {
+      color: #fff;
+    }
+    &_border {
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+    }
+  }
   .swiper {
     width: 100vw;
     margin: auto;

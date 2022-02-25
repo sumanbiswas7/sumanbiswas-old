@@ -13,6 +13,7 @@ import About from "../pages/about/index";
 import Skills from "../pages/skills/index";
 import Hobbies from "./hobbies";
 import Projects from "./projects";
+import Contact from "./contact";
 
 const Home: NextPage = () => {
   return (
@@ -96,6 +97,7 @@ const Home: NextPage = () => {
       <Skills />
       <Hobbies />
       <Projects />
+      <Contact />
     </div>
   );
 };

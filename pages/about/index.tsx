@@ -4,7 +4,14 @@ import { BsInstagram } from "react-icons/bs";
 export default function About() {
   return (
     <div className={styles.main_container}>
-      <img className={styles.top_left_tex} src="./about/about_top-left_tex.svg" />
+      <div className={styles.pagename}>
+        <p className={styles.pagename_name}>about</p>
+        <div className={styles.pagename_border} />
+      </div>
+      <img
+        className={styles.top_left_tex}
+        src="./about/about_top-left_tex.svg"
+      />
       <img
         className={styles.buttom_right_tex}
         src="./about/about_buttom-right_tex.svg"
@@ -16,8 +23,8 @@ export default function About() {
         </h1>
         <p className={styles.about_text_container_para}>
           currently, a student. learning and developing new skills. some of my
-          hobbies are football, photography, watching movies, cooking, and travelling. checkout
-          my resume to know more about me
+          hobbies are football, photography, watching movies, cooking, and
+          travelling. checkout my resume to know more about me
         </p>
         <div className={styles.about_text_container_icon_container}>
           <div className={styles.about_text_container_icon_container_icon}>
