@@ -78,12 +78,12 @@ $accent_col_light_hover: #a3a2a2;
       transition: all 0.5s;
     }
     @media (hover) {
-      &:hover &_circle {
-        transform: translateY(1rem);
-      }
-      &:hover &_hero_img {
-        transform: translateY(-2rem);
-      }
+    }
+    &:hover &_circle {
+      transform: translateY(1rem);
+    }
+    &:hover &_hero_img {
+      transform: translateY(-2rem);
     }
   }
 }
@@ -115,6 +115,7 @@ $accent_col_light_hover: #a3a2a2;
     right: 1.5rem;
     &_icon {
       margin-inline: 2px;
+      cursor: pointer;
     }
   }
 }

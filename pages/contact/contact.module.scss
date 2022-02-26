@@ -78,6 +78,9 @@
       border-radius: 3rem;
       border: none;
       transition: all 0.2s;
+      &:focus {
+        outline: 1px solid #000;
+      }
       &:hover {
         background-color: rgba($color: #fff, $alpha: 0.6);
         color: rgba($color: #fff, $alpha: 1);

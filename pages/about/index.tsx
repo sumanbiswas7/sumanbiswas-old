@@ -32,7 +32,7 @@ export default function About() {
         <div className={styles.about_text_container_icon_container}>
           <div className={styles.about_text_container_icon_container_icon}>
             <NextLink href={"https://www.instagram.com/sumanbiswas7/"}>
-              <BsInstagram size={20} color="#c4c4c4" />
+              <BsInstagram id={styles.ig} size={20} color="#c4c4c4" />
             </NextLink>
           </div>
           <NextLink href="https://drive.google.com/file/d/1gbo8yzCoMlM6foz54ZSEXhB4ApDX8YAY/view?usp=sharing">
