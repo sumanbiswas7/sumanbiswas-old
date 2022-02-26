@@ -10,13 +10,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "../../firebase/app";
-
+import MoonLoader from "react-spinners/MoonLoader";
 initializeApp(firebaseConfig);
 
 export default function Contact() {
   const nameRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
   const messageRef = useRef<HTMLTextAreaElement | null>(null);
+  const [load, setLoad] = useState(false);
   function handleSubmit(e: { preventDefault: () => void }) {
     e.preventDefault();
     let name = nameRef.current?.value;
@@ -37,6 +38,7 @@ export default function Contact() {
       var validRegex =
         /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
       if (email.match(validRegex)) {
+        setLoad(true);
         const db = getDatabase();
         push(ref(db, "messages/"), {
           name,
@@ -53,6 +55,7 @@ export default function Contact() {
               draggable: true,
               progress: undefined,
             });
+            setLoad(false);
             console.log("Message sent successfully");
             emailRef.current!.style.outlineColor = "#000";
             nameRef.current!.value = "";
@@ -69,6 +72,7 @@ export default function Contact() {
               draggable: true,
               progress: undefined,
             });
+            setLoad(false);
             console.log(e);
           });
       } else {
@@ -107,49 +111,65 @@ export default function Contact() {
         <div className={styles.pagename_border} />
       </div>
       <form className={styles.form}>
-        <h3 className={styles.form_heading}>Contact Me</h3>
-        <input
-          ref={nameRef}
-          type={"text"}
-          placeholder="your name"
-          className={styles.form_input}
-        />
-        <input
-          ref={emailRef}
-          type={"email"}
-          placeholder="your email"
-          className={styles.form_input}
-        />
-        <textarea
-          ref={messageRef}
-          placeholder="Message"
-          className={`${styles.form_input} ${styles.form_message}`}
-        />
-        <div className={styles.form_flex}>
-          <button onClick={handleSubmit} className={styles.form_submit_btn}>
-            Send
-          </button>
-          <div className={styles.form_flex_icons}>
-            <NextLink href={"/"}>
-              <div className={styles.form_icons_box}>
-                <FiFacebook size={17} className={styles.form_icons_box_icon} />
+        {!load ? (
+          <>
+            <h3 className={styles.form_heading}>Contact Me</h3>
+            <input
+              ref={nameRef}
+              type={"text"}
+              placeholder="your name"
+              className={styles.form_input}
+            />
+            <input
+              ref={emailRef}
+              type={"email"}
+              placeholder="your email"
+              className={styles.form_input}
+            />
+            <textarea
+              ref={messageRef}
+              placeholder="Message"
+              className={`${styles.form_input} ${styles.form_message}`}
+            />
+            <div className={styles.form_flex}>
+              <button onClick={handleSubmit} className={styles.form_submit_btn}>
+                Send
+              </button>
+              <div className={styles.form_flex_icons}>
+                <NextLink
+                  href={
+                    "https://www.facebook.com/profile.php?id=100009266254381"
+                  }
+                >
+                  <div className={styles.form_icons_box}>
+                    <FiFacebook
+                      size={17}
+                      className={styles.form_icons_box_icon}
+                    />
+                  </div>
+                </NextLink>
+                <NextLink href={"https://www.instagram.com/sumanbiswas7/"}>
+                  <div className={styles.form_icons_box}>
+                    <FaInstagram
+                      size={17}
+                      className={styles.form_icons_box_icon}
+                    />
+                  </div>
+                </NextLink>
+                <NextLink href={"https://twitter.com/SumanBi20341056"}>
+                  <div className={styles.form_icons_box}>
+                    <AiOutlineTwitter
+                      size={17}
+                      className={styles.form_icons_box_icon}
+                    />
+                  </div>
+                </NextLink>
               </div>
-            </NextLink>
-            <NextLink href={"/"}>
-              <div className={styles.form_icons_box}>
-                <FaInstagram size={17} className={styles.form_icons_box_icon} />
-              </div>
-            </NextLink>
-            <NextLink href={"/"}>
-              <div className={styles.form_icons_box}>
-                <AiOutlineTwitter
-                  size={17}
-                  className={styles.form_icons_box_icon}
-                />
-              </div>
-            </NextLink>
-          </div>
-        </div>
+            </div>
+          </>
+        ) : (
+          <MoonLoader />
+        )}
       </form>
     </div>
   );
