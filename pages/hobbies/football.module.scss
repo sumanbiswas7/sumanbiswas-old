@@ -1,0 +1,51 @@
+.main_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  @media only screen and (max-width: 570px) {
+    flex-direction: column;
+  }
+  .container_1 {
+    height: 100%;
+    width: 40%;
+    background-image: url("../../public/hobbies/football/bg_texture.svg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: 570px) {
+      display: none;
+    }
+    &_real_madrid_img {
+      width: 95%;
+    }
+  }
+  .container_2 {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: 570px) {
+      width: 100%;
+      background-image: url("../../public/hobbies/football/bg_texture.svg");
+      background-size: cover;
+      background-position: center;
+      &_text_container {
+        backdrop-filter: blur(5px);
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+      }
+    }
+    &_text_container {
+      width: 80%;
+
+      &_text {
+        margin-block: 1rem;
+      }
+    }
+  }
+}

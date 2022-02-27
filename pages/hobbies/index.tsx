@@ -14,11 +14,16 @@ export default function Hobbies() {
       <div className={styles.img_shadow} />
       <Card
         last={false}
-        link="/"
+        link="https://www.instagram.com/sumanbiswas7/"
         name="Photography"
         img="./hobbies/photography.svg"
       />
-      <Card last={true} link="/" name="Football" img="./hobbies/football.svg" />
+      <Card
+        last={true}
+        link="/hobbies/football"
+        name="Football"
+        img="./hobbies/football.svg"
+      />
     </div>
   );
 }

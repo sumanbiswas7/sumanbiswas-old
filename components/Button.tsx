@@ -9,12 +9,12 @@ interface Button {
 
 export function Button(props: Button) {
   return (
-    <NextLink href={props.href}>
+    <a rel="noreferrer" target={"_blank"} href={props.href}>
       {props.style == "dark" ? (
         <button className={styles.button}>{props.text}</button>
       ) : (
         <button className={styles.button_light}>{props.text}</button>
       )}
-    </NextLink>
+    </a>
   );
 }

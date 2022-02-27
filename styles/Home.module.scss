@@ -77,13 +77,11 @@ $accent_col_light_hover: #a3a2a2;
       width: 20rem;
       transition: all 0.5s;
     }
-    @media (hover) {
-    }
     &:hover &_circle {
-      transform: translateY(1rem);
+      transform: translateY(1rem) scale(0.7);
     }
     &:hover &_hero_img {
-      transform: translateY(-2rem);
+      transform: translateY(-4rem) scale(1.7);
     }
   }
 }

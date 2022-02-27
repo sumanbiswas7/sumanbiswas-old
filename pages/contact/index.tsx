@@ -136,7 +136,9 @@ export default function Contact() {
                 Send
               </button>
               <div className={styles.form_flex_icons}>
-                <NextLink
+                <a
+                  rel="noreferrer"
+                  target={"_blank"}
                   href={
                     "https://www.facebook.com/profile.php?id=100009266254381"
                   }
@@ -147,23 +149,31 @@ export default function Contact() {
                       className={styles.form_icons_box_icon}
                     />
                   </div>
-                </NextLink>
-                <NextLink href={"https://www.instagram.com/sumanbiswas7/"}>
+                </a>
+                <a
+                  rel="noreferrer"
+                  target={"_blank"}
+                  href={"https://www.instagram.com/sumanbiswas7/"}
+                >
                   <div className={styles.form_icons_box}>
                     <FaInstagram
                       size={17}
                       className={styles.form_icons_box_icon}
                     />
                   </div>
-                </NextLink>
-                <NextLink href={"https://twitter.com/SumanBi20341056"}>
+                </a>
+                <a
+                  rel="noreferrer"
+                  target={"_blank"}
+                  href={"https://twitter.com/SumanBi20341056"}
+                >
                   <div className={styles.form_icons_box}>
                     <AiOutlineTwitter
                       size={17}
                       className={styles.form_icons_box_icon}
                     />
                   </div>
-                </NextLink>
+                </a>
               </div>
             </div>
           </>

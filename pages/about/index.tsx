@@ -30,18 +30,25 @@ export default function About() {
           travelling. checkout my resume to know more about me
         </p>
         <div className={styles.about_text_container_icon_container}>
-          <div className={styles.about_text_container_icon_container_icon}>
-            <NextLink href={"https://www.instagram.com/sumanbiswas7/"}>
-              <BsInstagram id={styles.ig} size={20} color="#c4c4c4" />
-            </NextLink>
-          </div>
-          <NextLink href="https://drive.google.com/file/d/1gbo8yzCoMlM6foz54ZSEXhB4ApDX8YAY/view?usp=sharing">
+          <a
+            rel="noreferrer"
+            target={"_blank"}
+            href="https://www.instagram.com/sumanbiswas7/"
+            className={styles.about_text_container_icon_container_icon}
+          >
+            <BsInstagram id={styles.ig} size={20} color="#c4c4c4" />
+          </a>
+          <a
+            rel="noreferrer"
+            target={"_blank"}
+            href="https://drive.google.com/file/d/1gbo8yzCoMlM6foz54ZSEXhB4ApDX8YAY/view?usp=sharing"
+          >
             <button
               className={styles.about_text_container_icon_container_resume_btn}
             >
               resume
             </button>
-          </NextLink>
+          </a>
         </div>
       </div>
     </div>

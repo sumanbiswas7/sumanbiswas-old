@@ -8,7 +8,6 @@ import { Button } from "../components/Button";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
 import { HiOutlineMail } from "react-icons/hi";
-import NextLink from "next/link";
 import About from "../pages/about/index";
 import Skills from "../pages/skills/index";
 import Hobbies from "./hobbies";
@@ -34,9 +33,13 @@ const Home: NextPage = () => {
         <main className={styles.main}>
           <div className={styles.main_container}>
             <div className={styles.main_container_image_container_mobile}>
-              <div className={styles.main_container_image_container_circle}>
+              <div
+                id={styles.circle}
+                className={styles.main_container_image_container_circle}
+              >
                 <img
                   className={styles.main_container_image_container_hero_img}
+                  id={styles.hero_img}
                   src="./home/my_img.webp"
                 />
               </div>
@@ -77,20 +80,28 @@ const Home: NextPage = () => {
             size={30}
           />
           <div className={styles.footer_contact_mail_container}>
-            <NextLink href={"https://www.instagram.com/sumanbiswas7/"}>
+            <a
+              rel="noreferrer"
+              target={"_blank"}
+              href={"https://www.instagram.com/sumanbiswas7/"}
+            >
               <AiFillInstagram
                 className={styles.footer_contact_mail_container_icon}
                 color="#333333"
                 size={29}
               />
-            </NextLink>
-            <NextLink href={"https://wa.me/917407992473?text=<website>:"}>
+            </a>
+            <a
+              rel="noreferrer"
+              target={"_blank"}
+              href={"https://wa.me/917407992473?text=<website>:"}
+            >
               <HiOutlineMail
                 className={styles.footer_contact_mail_container_icon}
                 color="#333333"
                 size={30}
               />
-            </NextLink>
+            </a>
           </div>
         </footer>
       </div>
