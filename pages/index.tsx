@@ -14,6 +14,7 @@ import Skills from "../pages/skills/index";
 import Hobbies from "./hobbies";
 import Projects from "./projects";
 import Contact from "./contact";
+import { Footer } from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -98,6 +99,7 @@ const Home: NextPage = () => {
       <Hobbies />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   );
 };
