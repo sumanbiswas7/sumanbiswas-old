@@ -14,8 +14,18 @@ import Hobbies from "./hobbies";
 import Projects from "./projects";
 import Contact from "./contact";
 import { Footer } from "../components/Footer";
+import { useEffect } from "react";
+import { FetchData } from "../ipdata/FetchData";
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    try {
+      FetchData();
+    } catch {
+      return;
+    }
+  }, []);
+
   return (
     <div className={styles.pages_container}>
       <div className={styles.container}>
