@@ -1,0 +1,20 @@
+.container {
+  width: 80%;
+  // height: 3rem;
+  padding-block: 0.8rem;
+  background-color: #343434;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 0.5rem;
+  cursor: pointer;
+  margin-block: 0.1rem;
+  overflow-y: scroll;
+  &__name {
+    font-size: 0.85rem;
+  }
+  &__time {
+    font-size: 0.85rem;
+    justify-self: flex-end;
+  }
+}

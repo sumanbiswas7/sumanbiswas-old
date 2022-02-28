@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "../../firebase/app";
 import MoonLoader from "react-spinners/MoonLoader";
+import moment from "moment";
 initializeApp(firebaseConfig);
 
 export default function Contact() {
@@ -44,6 +45,7 @@ export default function Contact() {
           name,
           email,
           message,
+          date: moment(new Date()).format("DD-MM-YY, h:mm a"),
         })
           .then(() => {
             toast.success("Message sent successfully", {
