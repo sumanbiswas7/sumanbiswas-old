@@ -10,7 +10,6 @@ interface Props {
   image: String | any;
   key: String | any;
 }
-const tech = ["React Js", "Next Js"];
 export function ProjectCard(props: Props) {
   return (
     <div className={styles.container}>

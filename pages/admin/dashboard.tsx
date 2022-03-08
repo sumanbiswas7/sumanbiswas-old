@@ -99,11 +99,15 @@ export default function Dashboard() {
                 <p style={{ marginBottom: 10 }}>Message</p>
                 {messages.map(
                   (item: {
-                    data: { email: String; name: String; date: String };
+                    data: {
+                      email: String;
+                      name: String;
+                      date: String;
+                    };
                   }) => {
-                    console.log(item);
                     return (
                       <Message
+                        key={null}
                         date={item.data.date}
                         email={item.data.email}
                         name={item.data.name}
@@ -117,6 +121,7 @@ export default function Dashboard() {
                 {user.map((item: User) => {
                   return (
                     <Logins
+                      key={null}
                       city={item.data?.info?.city}
                       flag={item.data?.info.flag}
                       country={item.data?.info.country_name}
