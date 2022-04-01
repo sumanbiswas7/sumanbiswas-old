@@ -1,0 +1,17 @@
+.page {
+  margin-inline: 2rem;
+  & > h1 {
+    font-size: 1.4rem;
+  }
+  & > p {
+  }
+  & > h2 {
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+  }
+  & > p > ul {
+    margin-left: 2rem;
+    margin-top: 0.8rem;
+  }
+}
