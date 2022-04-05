@@ -1,9 +1,12 @@
 import styles from "./PrivacyPolicy.module.scss";
+import Image from "next/image";
 
 export default function PrivacyPolicy() {
   return (
     <div className={styles.page}>
-      <h1>vivid</h1>
+      <div>
+        <h1>vivid</h1>
+      </div>
       <h2>Privacy Policy</h2>
       <p>
         Suman Biswas built the vivid app as a Free app. This SERVICE is provided

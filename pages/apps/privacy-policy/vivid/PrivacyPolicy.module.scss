@@ -1,17 +1,46 @@
+@font-face {
+  font-family: "vivid";
+  src: url("/fonts/CabinSketch-Regular.ttf") format("truetype");
+}
 .page {
-  margin-inline: 2rem;
-  & > h1 {
-    font-size: 1.4rem;
-  }
-  & > p {
+  background-color: #fff;
+  padding-bottom: 2rem;
+  & > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 1.5rem;
+    background-color: #fff;
+    margin-bottom: 3rem;
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 0) 0%,
+      rgba(221, 56, 34, 1) 0%,
+      rgba(255, 207, 103, 1) 100%
+    );
+    & > h1 {
+      font-family: vivid;
+      color: #fff;
+      font-size: 3.5rem;
+      font-weight: 100;
+    }
   }
   & > h2 {
     margin-top: 1rem;
     margin-bottom: 0.3rem;
     font-size: 1.2rem;
+    margin-inline: 2rem;
+  }
+  & > p {
+    margin-inline: 2rem;
   }
   & > p > ul {
     margin-left: 2rem;
     margin-top: 0.8rem;
+    margin-inline: 2rem;
   }
 }

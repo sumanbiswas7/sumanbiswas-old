@@ -31,9 +31,9 @@ export function ProjectCard(props: Props) {
             );
           })}
         </div>
-        <NextLink href={props.link}>
+        <a href={props.link} target={"_blank"} rel={"noreferrer"}>
           <button className={styles.link_btn}>&rarr; link to visit</button>
-        </NextLink>
+        </a>
       </div>
       <img src={props.image} className={styles.project_pic} />
     </div>

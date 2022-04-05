@@ -22,12 +22,12 @@ export default function Projects() {
             key={null}
             logo={"./projects/vivid_logo.webp"}
             name="vivid"
-            tech_stack={["React Native", "Redux", "Firebase"]}
+            tech_stack={["React Native", "Redux", "Cloudinary", "Firebase"]}
             image={"./projects/vivid_img.webp"}
             description="vivid is a social media app for android and ios where people can share
           images, like, comment and many more..."
             link={
-              " https://drive.google.com/drive/folders/1DAZ4PV6ik9ymFsd7-cExqzBQ-iTG8E41?usp=sharing"
+              "https://play.google.com/store/apps/details?id=com.suman_biswas.vivid"
             }
           />
         </SwiperSlide>
