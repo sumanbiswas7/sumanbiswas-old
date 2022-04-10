@@ -5,17 +5,10 @@ import { useEffect, useState } from "react";
 import { firebaseConfig } from "../../firebase/app";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, child, get } from "firebase/database";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import Login from "../login";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { useRouter } from "next/router";
 initializeApp(firebaseConfig);
-const auth = getAuth();
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-  } else {
-    // User is signed out
-  }
-});
+
 interface User {
   key: String;
   data: {
@@ -32,6 +25,7 @@ interface User {
 export default function Dashboard() {
   const [user, setUsers] = useState([]);
   const [messages, setMessages] = useState([]);
+  const router = useRouter();
   useEffect(() => {
     const dbRef = ref(getDatabase());
     get(child(dbRef, `users/`))
@@ -69,76 +63,133 @@ export default function Dashboard() {
         console.error(error);
       });
   }, []);
+  const handleLogout = () => {
+    signOut(getAuth());
+  };
+  useEffect(() => {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        console.log("Signed In");
+      } else {
+        console.log("Not Signed In");
+        router.replace("/admin/login");
+      }
+    });
+  }, [handleLogout]);
   return (
     <>
-      {auth.currentUser ? (
-        <div className={styles.main_container}>
-          <div className={styles.sub_container_1}>
-            <img
-              className={styles.sub_container_1_admin_img}
-              src="https://sumanbiswas-website.s3.ap-south-1.amazonaws.com/PicsArt_02-02-11.11.11.jpg"
-            />
-            <p className={styles.sub_container_1_admin_name}>Suman Biswas</p>
-            <div className={styles.line} />
-            <p className={styles.sub_container_1_admin_type}>Owner</p>
-            <div className={styles.line} />
-            <div className={styles.notification_container}>
-              {/* <div className={styles.notification_container_div}>6</div> */}
-              <p className={styles.notification_container_message}>Messages</p>
-            </div>
-            <div className={styles.line} />
-            <button className={styles.sub_container_1_logout}>Log out</button>
+      <div className={styles.main_container}>
+        <div className={styles.sub_container_1}>
+          <img
+            className={styles.sub_container_1_admin_img}
+            src="https://sumanbiswas-website.s3.ap-south-1.amazonaws.com/PicsArt_02-02-11.11.11.jpg"
+          />
+          <p className={styles.sub_container_1_admin_name}>Suman Biswas</p>
+          <div className={styles.line} />
+          <p className={styles.sub_container_1_admin_type}>Owner</p>
+          <div className={styles.line} />
+          <div className={styles.notification_container}>
+            {/* <div className={styles.notification_container_div}>6</div> */}
+            <p className={styles.notification_container_message}>Messages</p>
           </div>
-          <div className={styles.sub_container_2}>
-            <div className={styles.pagename}>
-              <p className={styles.pagename_name}>admin</p>
-              <div className={styles.pagename_border} />
-            </div>
-            <div className={styles.sub_container_2_main}>
-              <div className={styles.sub_container_2_main_message_container}>
-                <p style={{ marginBottom: 10 }}>Message</p>
-                {messages.map(
-                  (item: {
-                    data: {
-                      email: String;
-                      name: String;
-                      date: String;
-                    };
-                  }) => {
-                    return (
-                      <Message
-                        key={null}
-                        date={item.data.date}
-                        email={item.data.email}
-                        name={item.data.name}
-                      />
-                    );
-                  }
-                )}
-              </div>
-              <div className={styles.sub_container_2_main_users_container}>
-                <p style={{ marginBottom: 10 }}>Log Ins</p>
-                {user.map((item: User) => {
+          <div className={styles.line} />
+          <button
+            onClick={handleLogout}
+            className={styles.sub_container_1_logout}
+          >
+            Log out
+          </button>
+        </div>
+        <div className={styles.sub_container_2}>
+          <div className={styles.pagename}>
+            <p className={styles.pagename_name}>dashboard</p>
+            <div className={styles.pagename_border} />
+          </div>
+          <div className={styles.sub_container_2_main}>
+            <div className={styles.sub_container_2_main_message_container}>
+              <p style={{ marginBottom: 10 }}>Message</p>
+              {messages.map(
+                (item: {
+                  data: {
+                    email: String;
+                    name: String;
+                    date: String;
+                  };
+                }) => {
                   return (
-                    <Logins
+                    <Message
                       key={null}
-                      city={item.data?.info?.city}
-                      flag={item.data?.info.flag}
-                      country={item.data?.info.country_name}
-                      continent={item.data?.info.continent_name}
-                      postal={item.data?.info.postal}
-                      date={item.data?.date}
-                      userKey={item.key}
+                      date={item.data.date}
+                      email={item.data.email}
+                      name={item.data.name}
                     />
                   );
-                })}
-              </div>
+                }
+              )}
+            </div>
+            <div className={styles.sub_container_2_main_users_container}>
+              <p style={{ marginBottom: 10 }}>Log Ins</p>
+              {user.map((item: User) => {
+                return (
+                  <Logins
+                    key={null}
+                    city={item.data?.info?.city}
+                    flag={item.data?.info.flag}
+                    country={item.data?.info.country_name}
+                    continent={item.data?.info.continent_name}
+                    postal={item.data?.info.postal}
+                    date={item.data?.date}
+                    userKey={item.key}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
-      ) : (
-        <Login />
-      )}
+      </div>
+      <div className={styles.phone_page}>
+        {/* <div>
+          <button>Messages</button>
+          <button>Log In</button>
+        </div> */}
+        <div className={styles.sub_container_2_main_message_container}>
+          {messages.map(
+            (item: {
+              data: {
+                email: String;
+                name: String;
+                date: String;
+              };
+            }) => {
+              return (
+                <Message
+                  key={null}
+                  date={item.data.date}
+                  email={item.data.email}
+                  name={item.data.name}
+                />
+              );
+            }
+          )}
+        </div>
+        <div className={styles.sub_container_2_main_users_container}>
+          {user.map((item: User) => {
+            return (
+              <Logins
+                key={null}
+                city={item.data?.info?.city}
+                flag={item.data?.info.flag}
+                country={item.data?.info.country_name}
+                continent={item.data?.info.continent_name}
+                postal={item.data?.info.postal}
+                date={item.data?.date}
+                userKey={item.key}
+              />
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 }

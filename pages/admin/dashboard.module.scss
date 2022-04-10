@@ -1,5 +1,12 @@
 .main_container {
   display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d2d2d;
+  @media only screen and (max-width: 900px) {
+    display: none;
+  }
   .sub_container_1 {
     width: 15rem;
     background-color: #343434;
@@ -8,6 +15,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+
     &_admin_img {
       width: 5rem;
       border-radius: 50%;
@@ -104,4 +112,14 @@
       }
     }
   }
+}
+.phone_page {
+  @media only screen and (min-width: 900px) {
+    display: none;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b5b5b5;
+  flex-direction: column;
 }

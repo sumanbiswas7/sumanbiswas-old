@@ -25,6 +25,11 @@ $white: #fff;
       display: none;
     }
   }
+  @media only screen and (max-width: 400px) {
+    & {
+      padding: 0;
+    }
+  }
   .text {
     padding-inline: 1.5rem;
     font-size: 0.85rem;
