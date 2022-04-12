@@ -36,7 +36,7 @@ export default function Projects() {
             key={null}
             logo={"./projects/moviezine_logo.svg"}
             name="moviezine"
-            tech_stack={["Next Js", "GraphQl", "Node Js", "MongoDB"]}
+            tech_stack={["Next", "GraphQl", "AWS", "Node", "MongoDB"]}
             image={"./projects/moviezine_img.webp"}
             description="website where everyone can share their
             favourite movie recommendations and see movies recommended by others"
