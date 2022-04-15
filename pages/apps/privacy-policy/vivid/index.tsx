@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
       <div>
         <h1>vivid</h1>
       </div>
-      <h2>Privacy Policy</h2>
+      <h2 className={styles.heading_policy}>Privacy Policy</h2>
       <p>
         Suman Biswas built the vivid app as a Free app. This SERVICE is provided
         by Suman Biswas at no cost and is intended for use as is. This page is
