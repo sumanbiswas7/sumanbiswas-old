@@ -21,6 +21,49 @@ export default function PrivacyPolicy() {
         Policy have the same meanings as in our Terms and Conditions, which are
         accessible at vivid unless otherwise defined in this Privacy Policy.
       </p>
+
+      {/* <h2>User Generated Contributions</h2> */}
+      <h2>Objectionable Content and Behaviors</h2>
+      <p>
+        <ul>
+          <li>
+            Your Contrbutions are not obscene, lewd, lascivious, flity, violent,
+            assing, bous slands of the objectionables del med by us
+          </li>
+          <li>
+            Your Contrbutions do not ridicuc mock, disparage, intimidate or
+            abuse anyone
+          </li>
+          <li>
+            Your Contrbutions are not used to harass or threaten in the legal
+            sense of those terms any other personal pro c es specific person or
+            class of people Your Cantbutions de notice any applicable regionerne
+            Your Contributions do not violate the privacy or publicity rights of
+            any third party
+          </li>
+          <li>
+            The creation, distribution transmission public display, or
+            performance, and the accessing, downloading of copying of your
+            Contributions and will not lnge the propery rights including but not
+            limited to the Copyright, trademark,rade secret or more rights of
+            any third party
+          </li>
+          <li>
+            You are the creator and owner of or have the necessary licensesnit,
+            consens releases, and permissions to use and to authorize us, the
+            Licensed Application, and other Liced Application to use your Con o
+            r in a manner contemplate by the licensed Application and the
+            license Agreement
+          </li>
+          <li>
+            You have the written consent release, and or permission of each and
+            every Identifiable ndividual person in your contributions to use the
+            name of likeness of each and every such Wanita d u person to enabi
+            inclusion and real your contributions in any manner contemplated by
+            the Licensed Application and this License Agreement
+          </li>
+        </ul>
+      </p>
       <h2>Information Collection and Use</h2>
       <p>
         For a better experience, while using our Service, I may require you to
@@ -43,53 +86,6 @@ export default function PrivacyPolicy() {
           <li>Google Analytics for Firebase</li>
           <li>Firebase Crashlytics</li>
           <li>Expo</li>
-        </ul>
-      </p>
-      <h2>User Generated Contributions</h2>
-      <p>
-        <ul>
-          <li>
-            1. The creation, distribution transmission public display, or
-            performance, and the accessing, downloading of copying of your
-            Contributions and will not lnge the propery rights including but not
-            limited to the Copyright, trademark,rade secret or more rights of
-            any third party
-          </li>
-          <li>
-            2. You are the creator and owner of or have the necessary
-            licensesnit, consens releases, and permissions to use and to
-            authorize us, the Licensed Application, and other Liced Application
-            to use your Con o r in a manner contemplate by the licensed
-            Application and the license Agreement
-          </li>
-          <li>
-            3. You have the written consent release, and or permission of each
-            and every Identifiable ndividual person in your contributions to use
-            the name of likeness of each and every such Wanita d u person to
-            enabi inclusion and real your contributions in any manner
-            contemplated by the Licensed Application and this License Agreement
-          </li>
-          <li>4. Your contrbutions are not false, inaccurate, or misleading</li>
-          <li>
-            5. You can buto n ul urcited or unauthorized deg inalienas pyramid
-            schemos, chain offers spam, mass mailings, or other forms of
-            solicitation
-          </li>
-          <li>
-            6. Your Contrbutions are not obscene, lewd, lascivious, flity,
-            violent, assing, bous slands of the objectionables del med by us
-          </li>
-          <li>
-            7. Your Contrbutions do not ridicuc mock, disparage, intimidate or
-            abuse anyone
-          </li>
-          <li>
-            8. Your Contrbutions are not used to harass or threaten in the legal
-            sense of those terms any other personal pro c es specific person or
-            class of people Your Cantbutions de notice any applicable regionerne
-            Your Contributions do not violate the privacy or publicity rights of
-            any third party
-          </li>
         </ul>
       </p>
       <h2>Log Data</h2>
