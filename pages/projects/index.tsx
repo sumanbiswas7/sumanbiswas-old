@@ -46,6 +46,17 @@ export default function Projects() {
         <SwiperSlide className={styles.swiper}>
           <ProjectCard
             key={null}
+            logo={"./projects/nutshell_logo.png"}
+            name="nutshell"
+            tech_stack={["React-Native", "GraphQl", "AWS", "Firebase"]}
+            image={"./projects/nutshell_img.webp"}
+            description="restaurant menu app"
+            link={"https://github.com/sumanbiswas7/nutshell"}
+          />
+        </SwiperSlide>
+        <SwiperSlide className={styles.swiper}>
+          <ProjectCard
+            key={null}
             logo={"./projects/portfolio_logo.png"}
             name="my portfolio"
             tech_stack={["Next Js", "Typescript", "Sass", "Firebase"]}
