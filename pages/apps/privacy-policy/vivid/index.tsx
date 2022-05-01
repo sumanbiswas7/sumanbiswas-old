@@ -7,7 +7,8 @@ export default function PrivacyPolicy() {
       <div>
         <h1>vivid</h1>
       </div>
-      <h2 className={styles.heading_policy}>Privacy Policy</h2>
+      <h2 className={styles.heading_policy}>User Policy</h2>
+      <h3>vivid &gt; user-policy</h3>
       <p>
         Suman Biswas built the vivid app as a Free app. This SERVICE is provided
         by Suman Biswas at no cost and is intended for use as is. This page is
@@ -27,40 +28,29 @@ export default function PrivacyPolicy() {
       <p>
         <ul>
           <li>
-            Your Contrbutions are not obscene, lewd, lascivious, flity, violent,
-            assing, bous slands of the objectionables del med by us
+            We don&apos;t allow posts that contain or promote sexual content or
+            profanity, including pornography, or any content or services
+            intended to be sexually gratifying. Content that contains nudity may
+            be allowed if the primary purpose is educational.
           </li>
           <li>
-            Your Contrbutions do not ridicuc mock, disparage, intimidate or
-            abuse anyone
+            We don&apos;t allow content that promotes violence or incites hatred
+            against individuals or groups based on race or ethnic origin,
+            religion, disability, age, nationality, veteran status, sexual
+            orientation, gender, gender identity, or any other characteristic.
           </li>
           <li>
-            Your Contrbutions are not used to harass or threaten in the legal
-            sense of those terms any other personal pro c es specific person or
-            class of people Your Cantbutions de notice any applicable regionerne
-            Your Contributions do not violate the privacy or publicity rights of
-            any third party
+            We don&apos;t allow posts that depict or facilitate gratuitous
+            violence or other dangerous activities.
           </li>
           <li>
-            The creation, distribution transmission public display, or
-            performance, and the accessing, downloading of copying of your
-            Contributions and will not lnge the propery rights including but not
-            limited to the Copyright, trademark,rade secret or more rights of
-            any third party
+            We don&apos;t allow posts that contain or facilitate threats,
+            harassment, or bullying.
           </li>
           <li>
-            You are the creator and owner of or have the necessary licensesnit,
-            consens releases, and permissions to use and to authorize us, the
-            Licensed Application, and other Liced Application to use your Con o
-            r in a manner contemplate by the licensed Application and the
-            license Agreement
-          </li>
-          <li>
-            You have the written consent release, and or permission of each and
-            every Identifiable ndividual person in your contributions to use the
-            name of likeness of each and every such Wanita d u person to enabi
-            inclusion and real your contributions in any manner contemplated by
-            the Licensed Application and this License Agreement
+            We don&apos;t allow posts that facilitate the sale of marijuana or
+            marijuana products, tobacco (including e-cigarettes and vape pens),
+            explosives, firearms, ammunition, or certain firearms accessories.
           </li>
         </ul>
       </p>

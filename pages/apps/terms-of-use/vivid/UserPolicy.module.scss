@@ -39,21 +39,26 @@
     margin-bottom: 0.3rem;
     font-size: 1rem;
     margin-inline: 2rem;
-    // color: #4f4f4f;
     color: #000;
-  }
-  & > h3 {
-    font-size: 1rem;
-    margin-inline: 2rem;
-    color: #000;
-    margin-block: 1rem;
   }
   & > p {
     margin-inline: 2rem;
+    margin-block: 1.5rem;
   }
+
   & > p > ul {
     margin-left: 2rem;
     margin-top: 0.8rem;
     margin-inline: 2rem;
+    & > li {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .conclution_para {
+    font-weight: bold;
+    font-style: italic;
+    margin-inline: 2rem;
+    font-size: 0.9rem;
   }
 }
