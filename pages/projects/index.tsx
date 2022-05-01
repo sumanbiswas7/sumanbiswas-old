@@ -50,7 +50,7 @@ export default function Projects() {
             name="nutshell"
             tech_stack={["React-Native", "GraphQl", "AWS", "Firebase"]}
             image={"./projects/nutshell_img.webp"}
-            description="restaurant menu app"
+            description="The cheapest and simplest way to make your own fully customizable restaurant menu app."
             link={"https://github.com/sumanbiswas7/nutshell"}
           />
         </SwiperSlide>
