@@ -1,9 +1,14 @@
 $card-size: 15rem;
 $accent_col: #333333;
 $accent_col_light: #c4c4c4;
+
 .container {
   width: $card-size;
   height: $card-size * 1.2;
+  @media only screen and (max-width: 535px) {
+    width: $card-size * 0.85;
+    height: $card-size * 1.2 * 0.85;
+  }
   background-color: #fff;
   -webkit-box-shadow: 5px 5px 18px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 5px 18px -5px rgba(0, 0, 0, 0.75);
