@@ -46,6 +46,11 @@
           width: 34ch;
         }
       }
+      @media screen and (max-width: 360px) {
+        & {
+          width: 28ch;
+        }
+      }
     }
     &_icon_container {
       margin-left: 1.5rem;
