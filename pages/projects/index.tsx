@@ -51,7 +51,9 @@ export default function Projects() {
             tech_stack={["React-Native", "GraphQl", "AWS", "Firebase"]}
             image={"./projects/nutshell_img.webp"}
             description="The cheapest and simplest way to make your own fully customizable restaurant menu app."
-            link={"https://github.com/sumanbiswas7/nutshell"}
+            link={
+              "https://play.google.com/store/apps/details?id=com.sumanbiswas.nutshell"
+            }
           />
         </SwiperSlide>
         <SwiperSlide className={styles.swiper}>
