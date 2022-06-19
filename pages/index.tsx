@@ -69,7 +69,7 @@ const Home: NextPage = () => {
               <Button text="hire me" href="/contact" style="dark" />
               <Button
                 text="resume"
-                href="https://drive.google.com/file/d/1Y5zHzuHRS4Y7G3njoa2sUIjUoX0PyDbQ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1RS92rzIsGWn5SEHNycVmDoSoBLybelDa/view?usp=sharing"
                 style="white"
               />
             </div>
