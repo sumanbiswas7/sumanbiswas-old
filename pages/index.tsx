@@ -7,7 +7,11 @@ import { NavButton } from "../components/NavButton";
 import { Button } from "../components/Button";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
+import { HiMail } from "react-icons/hi";
+
 import { HiOutlineMail } from "react-icons/hi";
+
 import About from "../pages/about/index";
 import Skills from "../pages/skills/index";
 import Hobbies from "./hobbies";
@@ -93,9 +97,9 @@ const Home: NextPage = () => {
             <a
               rel="noreferrer"
               target={"_blank"}
-              href={"https://www.instagram.com/sumanbiswas7/"}
+              href={"mailto:sumanbiswas842001@gmail.com"}
             >
-              <AiFillInstagram
+              <HiMail
                 className={styles.footer_contact_mail_container_icon}
                 color="#333333"
                 size={29}
@@ -104,9 +108,9 @@ const Home: NextPage = () => {
             <a
               rel="noreferrer"
               target={"_blank"}
-              href={"https://wa.me/917407992473?text=<website>:"}
+              href={"https://github.com/sumanbiswas7"}
             >
-              <HiOutlineMail
+              <AiFillGithub
                 className={styles.footer_contact_mail_container_icon}
                 color="#333333"
                 size={30}
