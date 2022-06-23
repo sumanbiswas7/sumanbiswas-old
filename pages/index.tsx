@@ -124,7 +124,6 @@ const Home: NextPage = () => {
       <Hobbies />
       <Projects />
       <Contact />
-      <Footer />
     </div>
   );
 };
