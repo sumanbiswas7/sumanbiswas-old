@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.26.0",
+    "email-validator": "^2.0.4",
     "firebase": "^9.6.7",
     "moment": "^2.29.1",
     "next": "12.1.0",
