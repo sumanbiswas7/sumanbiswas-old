@@ -1,13 +1,8 @@
 .main_container {
-  scroll-snap-align: start;
   width: 100vw;
   height: 100vh;
-  background-image: url("../../public/contact/bg.svg");
-  background-size: cover;
-  background-position: center;
+  scroll-snap-align: start;
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   .pagename {
     position: absolute;
@@ -22,90 +17,54 @@
       background-color: #fff;
     }
   }
-  .form {
-    $form-width: 40rem;
-    width: $form-width;
-    height: $form-width * 0.75;
-    background-color: rgba($color: #fff, $alpha: 0.085);
-    backdrop-filter: blur(4px);
-    border-radius: 2px;
+  .msg_box {
+    $size: 30rem;
+    width: $size * 1.6;
+    height: $size;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    @media only screen and (max-width: 570px) {
-      & {
-        height: $form-width * 0.65;
-      }
-    }
-    &_heading {
-      color: rgba($color: #fff, $alpha: 0.75);
-      font-weight: 200;
+    @media only screen and (max-width: 915px) {
+      flex-direction: column-reverse;
       width: 90%;
-      margin-bottom: 0.3rem;
     }
-    &_input {
-      background-color: rgba($color: #fff, $alpha: 0.2);
-      border: none;
-      margin-block: 0.5rem;
-      width: 90%;
-      padding-inline: 0.5rem;
-      height: 2.1rem;
-      &:focus {
-        outline: 1px solid #000;
+    &__contact_info {
+      background-color: #333333;
+      width: $size * 0.6;
+      height: $size;
+      @media only screen and (min-width: 1100px) {
+        height: $size * 0.75;
+        transform: translateX(-$size * 0.3);
       }
-      &::placeholder {
-        color: rgba($color: #fff, $alpha: 0.5);
-        font-weight: 200;
+      @media only screen and (max-width: 915px) {
+        width: $size;
+        width: 100%;
       }
     }
-    &_message {
-      padding-top: 0.4rem;
-      height: fit-content;
-      padding-bottom: 8rem;
-      resize: vertical;
-    }
-    &_flex {
-      width: 90%;
-      display: flex;
-      justify-content: space-between;
-      margin-block: 0.5rem;
-    }
-    &_submit_btn {
-      background-color: rgba($color: #fff, $alpha: 0.2);
-      color: rgba($color: #fff, $alpha: 0.5);
-      padding: 0.25rem 1.2rem;
-      border-radius: 3rem;
-      border: none;
-      transition: all 0.2s;
-      &:focus {
-        outline: 1px solid #000;
-      }
-      &:hover {
-        background-color: rgba($color: #fff, $alpha: 0.6);
-        color: rgba($color: #fff, $alpha: 1);
+    &__message {
+      background-color: #fff;
+      width: ($size);
+      height: $size;
+      @media only screen and (max-width: 915px) {
+        width: $size;
+        width: 100%;
       }
     }
-    // Icons
-    .form_flex_icons {
-      display: flex;
-    }
-    &_icons_box {
-      background-color: rgba($color: #fff, $alpha: 0.2);
-      width: 1.7rem;
-      height: 1.7rem;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-inline: 2px;
-      transition: all 0.2s;
-      &:hover {
-        background: rgba(0, 0, 0, 0.75);
-      }
-      &_icon {
-        color: rgba($color: #fff, $alpha: 0.5);
-      }
-    }
+  }
+  &__container_1 {
+    height: 100%;
+    width: 50%;
+    background-image: url("../../public/contact/background.svg");
+    background-size: cover;
+  }
+  &__container_2 {
+    height: 100%;
+    width: 50%;
+    background-color: #333333;
   }
 }
