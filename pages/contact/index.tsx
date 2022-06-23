@@ -5,8 +5,16 @@ import { BsTelephone } from "react-icons/bs";
 import { FiMail, FiFacebook, FiYoutube } from "react-icons/fi";
 import { VscGithub } from "react-icons/vsc";
 import { BsInstagram } from "react-icons/bs";
+import { ChangeEvent, FormEventHandler, useState } from "react";
+import { PulseLoader } from "react-spinners";
 
 export default function Contact() {
+  const [sending, setSending] = useState(false);
+  function submitHandler(e: ChangeEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSending((p) => !p);
+  }
+
   return (
     <div className={styles.main_container}>
       <NavButton />
@@ -65,12 +73,14 @@ export default function Contact() {
           </div>
         </div>
         <div className={styles.msg_box__message}>
-          <form>
+          <form onSubmit={submitHandler}>
             <h4>Send a Message</h4>
             <input placeholder="Your Name" />
             <input placeholder="Your Email" />
             <textarea placeholder="Message" />
-            <button>Send</button>
+            <button>
+              {sending ? <PulseLoader color="#fff" size={4} /> : "Send"}
+            </button>
           </form>
         </div>
       </div>

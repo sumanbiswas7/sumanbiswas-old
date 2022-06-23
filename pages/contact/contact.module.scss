@@ -93,12 +93,15 @@
     }
     &__message {
       background-color: #fff;
-      // width: ($size);
       display: flex;
       justify-content: center;
       & > form {
         @media only screen and (min-width: 1100px) {
           transform: translateX(-20%);
+          padding-left: 0;
+        }
+        @media only screen and (min-width: 915px) {
+          padding-left: 1.5rem;
         }
         height: 100%;
         display: flex;
@@ -125,6 +128,9 @@
           border-bottom: 2px solid #7d7d7d;
           background-color: transparent;
           transition: all 0.15s;
+          &::placeholder {
+            color: #7d7d7d;
+          }
           @media only screen and (max-width: 500px) {
             width: $size - 12rem;
           }
@@ -138,9 +144,12 @@
           margin-top: 1rem;
           background-color: #333333;
           color: #fff;
-          padding: 0.3rem 0.7rem;
+          // padding: 0.3rem 0.7rem;
           border: none;
           border-radius: 0.2rem;
+          width: 3.5rem;
+          height: 1.7rem;
+          cursor: pointer;
         }
       }
 
