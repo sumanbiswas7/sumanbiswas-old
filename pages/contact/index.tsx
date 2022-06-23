@@ -64,7 +64,15 @@ export default function Contact() {
             </a>
           </div>
         </div>
-        <div className={styles.msg_box__message}></div>
+        <div className={styles.msg_box__message}>
+          <form>
+            <h4>Send a Message</h4>
+            <input placeholder="Your Name" />
+            <input placeholder="Your Email" />
+            <textarea placeholder="Message" />
+            <button>Send</button>
+          </form>
+        </div>
       </div>
     </div>
   );
