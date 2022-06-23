@@ -36,6 +36,9 @@
     }
     &__contact_info {
       background-color: #333333;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       width: $size * 0.6;
       height: $size;
       color: #fff;

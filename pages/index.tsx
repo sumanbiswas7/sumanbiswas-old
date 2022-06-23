@@ -6,22 +6,19 @@ import logo from "../public/logo.svg";
 import { NavButton } from "../components/NavButton";
 import { Button } from "../components/Button";
 import { BsArrowDownCircle } from "react-icons/bs";
-import { AiFillInstagram } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { HiMail } from "react-icons/hi";
-
-import { HiOutlineMail } from "react-icons/hi";
-
 import About from "../pages/about/index";
 import Skills from "../pages/skills/index";
 import Hobbies from "./hobbies";
 import Projects from "./projects";
 import Contact from "./contact";
-import { Footer } from "../components/Footer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FetchData } from "../ipdata/FetchData";
 
 const Home: NextPage = () => {
+  const [views, setViews] = useState("---");
+
   useEffect(() => {
     try {
       FetchData();

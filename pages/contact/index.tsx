@@ -5,22 +5,45 @@ import { BsTelephone } from "react-icons/bs";
 import { FiMail, FiFacebook, FiYoutube } from "react-icons/fi";
 import { VscGithub } from "react-icons/vsc";
 import { BsInstagram } from "react-icons/bs";
-import { ChangeEvent, useState, useRef } from "react";
+import { ChangeEvent, useState, useRef, useEffect } from "react";
 import PulseLoader from "react-spinners/PulseLoader";
 import moment from "moment";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { validate } from "email-validator";
-import { getDatabase, push, ref } from "firebase/database";
 import { initializeApp } from "firebase/app";
+import { getDatabase, push, ref, onValue, set } from "firebase/database";
 import { firebaseConfig } from "../../firebase/app";
+import { CopyrightBig, CopyrightSmall } from "../../components/Copyright";
+
 initializeApp(firebaseConfig);
 
 export default function Contact() {
   const [sending, setSending] = useState(false);
+  const [views, setViews] = useState("---");
   const nameRef = useRef<HTMLInputElement>(null);
   const mailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    updateViews();
+
+    function updateViews() {
+      const db = getDatabase();
+      const starCountRef = ref(db, "views/");
+      onValue(
+        starCountRef,
+        (snapshot) => {
+          const data = snapshot.val();
+          setViews(data.views);
+          set(ref(getDatabase(), "/views"), {
+            views: data.views + 1,
+          });
+        },
+        { onlyOnce: true }
+      );
+    }
+  }, []);
 
   function submitHandler(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -87,7 +110,9 @@ export default function Contact() {
           <div className={styles.pagename_border} />
         </div>
         <div className={styles.main_container__container_1}></div>
-        <div className={styles.main_container__container_2}></div>
+        <div className={styles.main_container__container_2}>
+          <CopyrightBig views={views} />
+        </div>
         <div className={styles.msg_box}>
           <div className={styles.msg_box__contact_info}>
             <h3 className={styles.msg_box__contact_info__header}>
@@ -137,6 +162,7 @@ export default function Contact() {
                 <FiYoutube size={17} />
               </a>
             </div>
+            <CopyrightSmall views={views} />
           </div>
           <div className={styles.msg_box__message}>
             <form onSubmit={submitHandler}>
