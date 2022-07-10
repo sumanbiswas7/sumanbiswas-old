@@ -41,7 +41,7 @@ export default function About() {
           <a
             rel="noreferrer"
             target={"_blank"}
-            href="https://drive.google.com/file/d/1gbo8yzCoMlM6foz54ZSEXhB4ApDX8YAY/view?usp=sharing"
+            href="https://sumanbiswas-website.s3.ap-south-1.amazonaws.com/Suman+Biswas.pdf"
           >
             <button
               className={styles.about_text_container_icon_container_resume_btn}
