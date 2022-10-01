@@ -16,17 +16,22 @@ import Contact from "./contact";
 import { useEffect, useState } from "react";
 import { FetchData } from "../ipdata/FetchData";
 import { SkillsGrid } from "../components/SkillsSimplified/SkillsGrid";
+import { Loader } from "../components/Loader";
 
 const Home: NextPage = () => {
-  const [views, setViews] = useState("---");
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     try {
       FetchData();
     } catch {
       return;
     }
+    setTimeout(() => {
+      setLoading(false);
+    }, 1200);
   }, []);
+
+  if (loading) return <Loader />;
 
   return (
     <div className={styles.pages_container}>
