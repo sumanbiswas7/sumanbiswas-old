@@ -15,6 +15,7 @@ import Projects from "./projects";
 import Contact from "./contact";
 import { useEffect, useState } from "react";
 import { FetchData } from "../ipdata/FetchData";
+import { SkillsGrid } from "../components/SkillsSimplified/SkillsGrid";
 
 const Home: NextPage = () => {
   const [views, setViews] = useState("---");
@@ -118,6 +119,7 @@ const Home: NextPage = () => {
       </div>
       <About />
       <Skills />
+      <SkillsGrid />
       <Hobbies />
       <Projects />
       <Contact />

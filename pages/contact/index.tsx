@@ -1,9 +1,11 @@
 import { NavButton } from "../../components/NavButton";
 import styles from "./contact.module.scss";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import { AiFillLinkedin } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 import { FiMail, FiFacebook, FiYoutube } from "react-icons/fi";
 import { VscGithub } from "react-icons/vsc";
+import { SiLeetcode } from "react-icons/si";
 import { BsInstagram } from "react-icons/bs";
 import { ChangeEvent, useState, useRef, useEffect } from "react";
 import PulseLoader from "react-spinners/PulseLoader";
@@ -141,11 +143,25 @@ export default function Contact() {
                 <BsInstagram size={15} />
               </a>
               <a
+                href="https://www.linkedin.com/in/sumanbiswas7"
+                target={"_blank"}
+                rel={"noreferrer"}
+              >
+                <AiFillLinkedin size={17} />
+              </a>
+              <a
                 href="https://github.com/sumanbiswas7"
                 target={"_blank"}
                 rel={"noreferrer"}
               >
                 <VscGithub size={17} />
+              </a>
+              <a
+                href="https://leetcode.com/sumanbiswas7/"
+                target={"_blank"}
+                rel={"noreferrer"}
+              >
+                <SiLeetcode size={17} />
               </a>
               <a
                 href="https://www.facebook.com/people/Suman-Biswas/100009266254381/"
