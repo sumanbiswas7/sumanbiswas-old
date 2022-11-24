@@ -19,16 +19,13 @@ import { SkillsGrid } from "../components/SkillsSimplified/SkillsGrid";
 import { Loader } from "../components/Loader";
 
 const Home: NextPage = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
-    try {
-      FetchData();
-    } catch {
-      return;
-    }
-    setTimeout(() => {
-      setLoading(false);
-    }, 1200);
+    // try {
+    //   FetchData();
+    // } catch {
+    //   return;
+    // }
   }, []);
 
   if (loading) return <Loader />;

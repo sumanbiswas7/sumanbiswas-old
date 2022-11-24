@@ -15,10 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { validate } from "email-validator";
 import { initializeApp } from "firebase/app";
 import { getDatabase, push, ref, onValue, set } from "firebase/database";
-import { firebaseConfig } from "../../firebase/app";
 import { CopyrightBig, CopyrightSmall } from "../../components/Copyright";
-
-initializeApp(firebaseConfig);
 
 export default function Contact() {
   const [sending, setSending] = useState(false);
@@ -26,26 +23,6 @@ export default function Contact() {
   const nameRef = useRef<HTMLInputElement>(null);
   const mailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
-
-  useEffect(() => {
-    updateViews();
-
-    function updateViews() {
-      const db = getDatabase();
-      const starCountRef = ref(db, "views/");
-      onValue(
-        starCountRef,
-        (snapshot) => {
-          const data = snapshot.val();
-          setViews(data.views);
-          set(ref(getDatabase(), "/views"), {
-            views: data.views + 1,
-          });
-        },
-        { onlyOnce: true }
-      );
-    }
-  }, []);
 
   function submitHandler(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
